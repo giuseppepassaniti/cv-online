@@ -5,21 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV | Giuseppe Passaniti</title>
     
-    <!-- Google Fonts: Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
-        /* * CSS STYLES
-         * This block defines the look and feel of your CV.
-         * I've used CSS variables (--primary-color, etc.) to make it easy to change the color scheme.
-        */
-
-        /* Variables for colors and fonts for easy customization */
         :root {
             --primary-color: #0056b3; /* Professional blue */
             --secondary-color: #007bff;
@@ -30,28 +22,25 @@
             --white-card: #ffffff; /* White background for sections */
         }
 
-        /* Basic reset and box-sizing setup */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* General body style */
         body {
             font-family: 'Poppins', sans-serif;
             background-color: var(--light-bg);
             color: var(--body-text);
-            display: flex; /* Main layout based on Flexbox */
-            line-height: 1.7; /* Line height for better readability */
+            display: flex; 
+            line-height: 1.7; 
         }
 
-        /* --- Sidebar --- */
         .sidebar {
-            width: 340px; /* Fixed width for the sidebar */
+            width: 340px; 
             background-color: var(--white-card);
             border-right: 1px solid var(--border-color);
-            position: fixed; /* Stays fixed during scroll */
+            position: fixed; 
             top: 0;
             left: 0;
             height: 100vh;
@@ -65,8 +54,8 @@
         .profile-photo {
             width: 160px;
             height: 160px;
-            border-radius: 50%; /* Round photo */
-            object-fit: cover; /* Ensures the image covers the space without distortion */
+            border-radius: 50%; 
+            object-fit: cover; 
             border: 6px solid var(--light-bg);
             margin-bottom: 20px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -86,15 +75,19 @@
             margin-bottom: 30px;
         }
         
-        /* Styles for contact information */
         .contact-info {
             width: 100%;
             text-align: left;
         }
+        
+        /* MODIFICA PER ALLINEAMENTO ICONE */
         .contact-info p, .personal-info p {
+            display: flex;          /* Attiva Flexbox */
+            align-items: center;    /* Allinea verticalmente al centro */
             margin-bottom: 12px;
             font-size: 0.9em;
         }
+
         .contact-info i {
             margin-right: 12px;
             color: var(--primary-color);
@@ -111,7 +104,6 @@
             text-decoration: underline;
         }
         
-        /* Styles for additional personal info */
         .personal-info {
             text-align: left;
             width: 100%;
@@ -126,14 +118,12 @@
             text-align: center;
         }
 
-        /* --- Main Content --- */
         .main-content {
-            margin-left: 340px; /* Space for the fixed sidebar */
+            margin-left: 340px; 
             padding: 50px;
-            width: calc(100% - 340px); /* Occupies the remaining space */
+            width: calc(100% - 340px); 
         }
 
-        /* Common style for each section */
         .section {
             margin-bottom: 45px;
             background: var(--white-card);
@@ -161,7 +151,6 @@
             font-size: 1.05em;
         }
         
-        /* Styles for the skill "pills" */
         .skills-container {
             margin-top: 15px;
         }
@@ -184,7 +173,6 @@
             font-weight: 500;
         }
         
-        /* Style for the experience timeline */
         .timeline {
             position: relative;
             padding-left: 30px;
@@ -238,7 +226,6 @@
             margin-bottom: 8px;
         }
 
-        /* Bullet point style */
         .timeline-content li::before {
             content: '›';
             position: absolute;
@@ -248,25 +235,23 @@
             color: var(--primary-color);
         }
 
-        /* Styles for Languages and Certifications sections */
         .languages p, .certifications p {
             margin-bottom: 5px;
         }
 
-        /* Responsive Design: Adjusts layout for smaller screens */
         @media (max-width: 1024px) {
             body {
-                flex-direction: column; /* Stacks elements vertically */
+                flex-direction: column;
             }
             .sidebar {
-                position: relative; /* Removes fixed positioning */
+                position: relative;
                 width: 100%;
                 height: auto;
                 border-right: none;
                 border-bottom: 1px solid var(--border-color);
             }
             .main-content {
-                margin-left: 0; /* Removes the left margin */
+                margin-left: 0; 
                 width: 100%;
                 padding: 30px;
             }
@@ -285,13 +270,7 @@
     </style>
 </head>
 <body>
-
-    <!--
-      THE SIDEBAR (LEFT COLUMN)
-      Contains fixed information: photo, name, contacts.
-    -->
     <aside class="sidebar">
-        <!-- The 'src' now points to the correct and direct Imgur link. -->
         <img src="https://i.imgur.com/4c0RGbC.jpeg" alt="Profile Photo of Giuseppe Passaniti" class="profile-photo">
         
         <h1>Giuseppe Passaniti</h1>
@@ -304,33 +283,22 @@
         </div>
 
         <div class="personal-info">
-             <p><i class="fas fa-calendar-alt"></i> February 6, 2000</p>
-             <p><i class="fas fa-map-marker-alt"></i> Malta</p>
+             <p><i class="fas fa-calendar-alt"></i><span>February 6, 2000</span></p>
+             <p><i class="fas fa-map-marker-alt"></i><span>Malta</span></p>
         </div>
 
-        <!-- 
-            DOWNLOAD PDF LINK
-            Ricorda di sostituire "#" con il link al tuo file PDF effettivo.
-        -->
-        <a href="#" download style="display:inline-block; text-align:center; margin-top: 25px; padding: 10px 15px; border: 1px solid var(--primary-color); color: var(--primary-color); border-radius: 5px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">
-            <i class="fas fa-download"></i> Download PDF
+        <a href="#" download style="display:inline-flex; align-items:center; justify-content:center; text-align:center; margin-top: 25px; padding: 10px 15px; border: 1px solid var(--primary-color); color: var(--primary-color); border-radius: 5px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">
+            <i class="fas fa-download" style="margin-right: 8px;"></i> Download PDF
         </a>
 
     </aside>
-
-    <!--
-      THE MAIN CONTENT (RIGHT COLUMN)
-      Contains the scrollable sections: summary, skills, experience, etc.
-    -->
     <main class="main-content">
-
         <section id="summary" class="section executive-summary">
             <h3 class="section-title">Executive Summary</h3>
             <p>
                 Experienced business consultant and CFO with a strong background in financial strategy, process optimization, and corporate operations. Proven track record of managing cross-functional projects in high-pressure environments, developing internal procedures, and delivering data-driven results. Expert in Airtable and no-code tools, I design and implement tailored business systems to improve efficiency, compliance, and decision-making. Thanks to my management engineering background and hands-on experience with startups and SMEs, I’m able to bridge the gap between business needs and technical execution. Passionate about continuous learning, problem solving, and helping companies scale with control and clarity.
             </p>
         </section>
-
         <section id="skills" class="section">
             <h3 class="section-title">Key Skills & Tools</h3>
             <div class="skills-container">
@@ -365,7 +333,6 @@
                 <span class="skill-tag">Stakeholder Management</span>
             </div>
         </section>
-
         <section id="experience" class="section">
             <h3 class="section-title">Work Experience</h3>
             <div class="timeline">
@@ -409,7 +376,6 @@
                 </div>
             </div>
         </section>
-
         <section id="education" class="section">
             <h3 class="section-title">Education</h3>
              <div class="timeline">
@@ -430,20 +396,16 @@
                 </div>
             </div>
         </section>
-
         <section id="languages" class="section languages">
             <h3 class="section-title">Languages</h3>
             <p><strong>Italian:</strong> Native</p>
             <p><strong>English:</strong> Fluent (C1/C2)</p>
         </section>
-
         <section id="certifications" class="section certifications">
             <h3 class="section-title">Certifications & Professional Development</h3>
             <p>Basic knowledge of Agile methodologies (Scrum, Kanban).</p>
             <p>Currently exploring PMP/PRINCE2 certifications (willing to complete based on role).</p>
         </section>
-
     </main>
-
 </body>
 </html>
