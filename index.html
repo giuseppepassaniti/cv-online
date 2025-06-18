@@ -5,29 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV | Giuseppe Passaniti</title>
     
+    <!-- Google Fonts: Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
+        /* Variabili Globali */
         :root {
-            --primary-color: #0056b3; /* Professional blue */
+            --primary-color: #0056b3;
             --secondary-color: #007bff;
-            --light-bg: #f8f9fa; /* Light gray background */
-            --dark-text: #212529; /* Near-black for readability */
-            --body-text: #495057; /* Gray for body text */
-            --border-color: #e9ecef; /* Color for borders and dividers */
-            --white-card: #ffffff; /* White background for sections */
+            --light-bg: #f8f9fa;
+            --dark-text: #212529;
+            --body-text: #495057;
+            --border-color: #e9ecef;
+            --white-card: #ffffff;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        /* Stili Generali per lo Schermo */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Poppins', sans-serif;
             background-color: var(--light-bg);
@@ -41,9 +40,7 @@
             background-color: var(--white-card);
             border-right: 1px solid var(--border-color);
             position: fixed; 
-            top: 0;
-            left: 0;
-            height: 100vh;
+            top: 0; left: 0; height: 100vh;
             padding: 40px;
             display: flex;
             flex-direction: column;
@@ -52,8 +49,7 @@
         }
 
         .profile-photo {
-            width: 160px;
-            height: 160px;
+            width: 160px; height: 160px;
             border-radius: 50%; 
             object-fit: cover; 
             border: 6px solid var(--light-bg);
@@ -62,61 +58,45 @@
         }
 
         .sidebar h1 {
-            font-size: 1.9em;
-            color: var(--dark-text);
-            font-weight: 700;
-            margin: 0;
+            font-size: 1.9em; color: var(--dark-text); font-weight: 700; margin: 0;
         }
 
         .sidebar h2 {
-            font-size: 1.05em;
-            font-weight: 400;
-            color: var(--primary-color);
-            margin-bottom: 30px;
+            font-size: 1.05em; font-weight: 400; color: var(--primary-color); margin-bottom: 30px;
         }
         
-        .contact-info {
-            width: 100%;
-            text-align: left;
-        }
+        .contact-info { width: 100%; text-align: left; }
         
-        /* MODIFICA PER ALLINEAMENTO ICONE */
         .contact-info p, .personal-info p {
-            display: flex;          /* Attiva Flexbox */
-            align-items: center;    /* Allinea verticalmente al centro */
-            margin-bottom: 12px;
-            font-size: 0.9em;
+            display: flex; align-items: center; 
+            margin-bottom: 12px; font-size: 0.9em;
         }
 
-        .contact-info i {
-            margin-right: 12px;
-            color: var(--primary-color);
-            width: 20px;
-            text-align: center;
+        .contact-info i, .personal-info i {
+            margin-right: 12px; color: var(--primary-color); width: 20px; text-align: center;
         }
+
         .contact-info a {
-            color: var(--body-text);
-            text-decoration: none;
-            transition: color 0.3s ease;
+            color: var(--body-text); text-decoration: none; transition: color 0.3s ease;
         }
         .contact-info a:hover {
-            color: var(--primary-color);
-            text-decoration: underline;
+            color: var(--primary-color); text-decoration: underline;
         }
         
         .personal-info {
-            text-align: left;
-            width: 100%;
-            margin-top: 25px;
-            padding-top: 25px;
+            text-align: left; width: 100%;
+            margin-top: 25px; padding-top: 25px;
             border-top: 1px solid var(--border-color);
         }
-        .personal-info i {
-            margin-right: 12px;
-            color: var(--primary-color);
-            width: 20px;
-            text-align: center;
+
+        .download-button {
+            display:inline-flex; align-items:center; justify-content:center; 
+            text-align:center; margin-top: 25px; padding: 10px 15px; 
+            border: 1px solid var(--primary-color); color: var(--primary-color); 
+            border-radius: 5px; text-decoration: none; font-weight: 600; 
+            transition: all 0.3s ease;
         }
+        .download-button i { margin-right: 8px; }
 
         .main-content {
             margin-left: 340px; 
@@ -125,9 +105,7 @@
         }
 
         .section {
-            margin-bottom: 45px;
-            background: var(--white-card);
-            padding: 35px;
+            margin-bottom: 45px; background: var(--white-card); padding: 35px;
             border-radius: 12px;
             box-shadow: 0 6px 20px rgba(0,0,0,0.06);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -138,159 +116,130 @@
         }
 
         .section-title {
-            font-size: 1.7em;
-            font-weight: 700;
-            color: var(--primary-color);
-            margin-bottom: 25px;
-            padding-bottom: 10px;
+            font-size: 1.7em; font-weight: 700; color: var(--primary-color);
+            margin-bottom: 25px; padding-bottom: 10px;
             border-bottom: 2px solid var(--primary-color);
             display: inline-block;
         }
 
-        .executive-summary p {
-            font-size: 1.05em;
-        }
+        .executive-summary p { font-size: 1.05em; }
         
-        .skills-container {
-            margin-top: 15px;
-        }
+        .skills-container { margin-top: 15px; }
         .skill-category {
-            font-weight: 600;
-            color: var(--dark-text);
-            margin-top: 20px;
-            margin-bottom: 10px;
+            font-weight: 600; color: var(--dark-text);
+            margin-top: 20px; margin-bottom: 10px;
             font-size: 1.1em;
         }
         .skill-tag {
-            display: inline-block;
-            background-color: var(--light-bg);
-            color: var(--body-text);
-            padding: 6px 15px;
-            border-radius: 20px;
-            margin: 4px;
-            font-size: 0.9em;
-            border: 1px solid var(--border-color);
+            display: inline-block; background-color: var(--light-bg);
+            color: var(--body-text); padding: 6px 15px;
+            border-radius: 20px; margin: 4px;
+            font-size: 0.9em; border: 1px solid var(--border-color);
             font-weight: 500;
         }
         
-        .timeline {
-            position: relative;
-            padding-left: 30px;
-            border-left: 2px solid var(--border-color);
-        }
-        .timeline-item {
-            position: relative;
-            margin-bottom: 35px;
-            padding-bottom: 20px;
-        }
-        .timeline-item:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
+        .timeline { position: relative; padding-left: 30px; border-left: 2px solid var(--border-color); }
+        .timeline-item { position: relative; margin-bottom: 35px; padding-bottom: 20px; }
+        .timeline-item:last-child { margin-bottom: 0; padding-bottom: 0; }
         .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -39px;
-            top: 5px;
-            width: 15px;
-            height: 15px;
-            border-radius: 50%;
-            background-color: var(--light-bg);
-            border: 3px solid var(--primary-color);
+            content: ''; position: absolute; left: -39px; top: 5px;
+            width: 15px; height: 15px; border-radius: 50%;
+            background-color: var(--light-bg); border: 3px solid var(--primary-color);
         }
 
-        .timeline-date {
-            font-size: 0.9em;
-            color: var(--body-text);
-            margin-bottom: 5px;
-            font-weight: 600;
-        }
-        .timeline-title {
-            font-weight: 700;
-            color: var(--dark-text);
-            font-size: 1.25em;
-        }
-        .timeline-company {
-            font-weight: 400;
-            color: var(--body-text);
-            font-size: 1.05em;
-            margin-bottom: 10px;
-        }
-        .timeline-content ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        .timeline-content li {
-            position: relative;
-            padding-left: 22px;
-            margin-bottom: 8px;
-        }
+        .timeline-date { font-size: 0.9em; color: var(--body-text); margin-bottom: 5px; font-weight: 600; }
+        .timeline-title { font-weight: 700; color: var(--dark-text); font-size: 1.25em; }
+        .timeline-company { font-weight: 400; color: var(--body-text); font-size: 1.05em; margin-bottom: 10px; }
+        .timeline-content ul { list-style-type: none; padding-left: 0; }
+        .timeline-content li { position: relative; padding-left: 22px; margin-bottom: 8px; }
 
         .timeline-content li::before {
-            content: '›';
-            position: absolute;
-            left: 0;
-            top: -2px;
-            font-size: 1.2em;
-            color: var(--primary-color);
+            content: '›'; position: absolute; left: 0; top: -2px;
+            font-size: 1.2em; color: var(--primary-color);
         }
 
-        .languages p, .certifications p {
-            margin-bottom: 5px;
-        }
+        .languages p, .certifications p { margin-bottom: 5px; }
 
+        /* Stili per schermi piccoli */
         @media (max-width: 1024px) {
-            body {
-                flex-direction: column;
-            }
-            .sidebar {
-                position: relative;
-                width: 100%;
-                height: auto;
-                border-right: none;
-                border-bottom: 1px solid var(--border-color);
-            }
-            .main-content {
-                margin-left: 0; 
-                width: 100%;
-                padding: 30px;
-            }
+            body { flex-direction: column; }
+            .sidebar { position: relative; width: 100%; height: auto; border-right: none; border-bottom: 1px solid var(--border-color); }
+            .main-content { margin-left: 0; width: 100%; padding: 30px; }
         }
         @media (max-width: 480px) {
-            .main-content {
-                padding: 20px;
-            }
-            .section {
-                padding: 25px;
-            }
-            .sidebar {
-                padding: 30px;
-            }
+            .main-content { padding: 20px; }
+            .section { padding: 25px; }
+            .sidebar { padding: 30px; }
         }
     </style>
+    
+    <!-- ============================================= -->
+    <!-- NUOVA SEZIONE: Stili solo per la Stampa (PDF) -->
+    <!-- ============================================= -->
+    <style media="print">
+        /* Regole che si applicano solo quando si stampa o si salva come PDF */
+        @page {
+            size: A4;
+            margin: 2cm; /* Margini del foglio A4 */
+        }
+
+        body {
+            display: block !important; /* Rimuove il layout flex per la stampa */
+            font-size: 10pt; /* Dimensione del testo adatta per la stampa */
+            color: #000;
+            background: #fff;
+        }
+
+        .sidebar, .download-button {
+            display: none !important; /* Nasconde la sidebar e il pulsante di download */
+        }
+
+        .main-content {
+            margin-left: 0 !important;
+            width: 100% !important;
+            padding: 0 !important;
+        }
+
+        .section {
+            box-shadow: none !important; /* Rimuove le ombre */
+            border: 1px solid #ccc; /* Aggiunge un bordo leggero */
+            margin-bottom: 1.5cm;
+            padding: 0.5cm;
+            page-break-inside: avoid; /* Evita di spezzare una sezione tra due pagine */
+        }
+        
+        .section-title {
+            color: #000;
+        }
+        
+        .skill-tag {
+            border: 1px solid #ccc;
+        }
+
+        a {
+            color: #000 !important;
+            text-decoration: none !important;
+        }
+    </style>
+
 </head>
 <body>
     <aside class="sidebar">
         <img src="https://i.imgur.com/4c0RGbC.jpeg" alt="Profile Photo of Giuseppe Passaniti" class="profile-photo">
-        
         <h1>Giuseppe Passaniti</h1>
         <h2>Corporate Project Manager | Business Consultant</h2>
-
         <div class="contact-info">
             <p><i class="fas fa-phone"></i><a href="tel:+393293951971">+39 3293951971</a></p>
             <p><i class="fas fa-envelope"></i><a href="mailto:giuseppepassaniti00@gmail.com">giuseppepassaniti00@gmail.com</a></p>
             <p><i class="fab fa-linkedin"></i><a href="https://linkedin.com/in/giuseppepassaniti" target="_blank" rel="noopener noreferrer">linkedin.com/in/giuseppepassaniti</a></p>
         </div>
-
         <div class="personal-info">
              <p><i class="fas fa-calendar-alt"></i><span>February 6, 2000</span></p>
              <p><i class="fas fa-map-marker-alt"></i><span>Malta</span></p>
         </div>
-
-        <a href="#" download style="display:inline-flex; align-items:center; justify-content:center; text-align:center; margin-top: 25px; padding: 10px 15px; border: 1px solid var(--primary-color); color: var(--primary-color); border-radius: 5px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">
-            <i class="fas fa-download" style="margin-right: 8px;"></i> Download PDF
+        <a href="#" download class="download-button">
+            <i class="fas fa-download"></i> Download PDF
         </a>
-
     </aside>
     <main class="main-content">
         <section id="summary" class="section executive-summary">
@@ -303,108 +252,38 @@
             <h3 class="section-title">Key Skills & Tools</h3>
             <div class="skills-container">
                 <p class="skill-category">Project Management</p>
-                <span class="skill-tag">Agile Mindset</span>
-                <span class="skill-tag">Cross-functional Teams</span>
-                <span class="skill-tag">KPI Tracking</span>
-                <span class="skill-tag">Procedure Design</span>
-
+                <span class="skill-tag">Agile Mindset</span><span class="skill-tag">Cross-functional Teams</span><span class="skill-tag">KPI Tracking</span><span class="skill-tag">Procedure Design</span>
                 <p class="skill-category">Tools & Systems</p>
-                <span class="skill-tag">Airtable</span>
-                <span class="skill-tag">Notion</span>
-                <span class="skill-tag">Zapier</span>
-                <span class="skill-tag">Google Workspace</span>
-                <span class="skill-tag">Microsoft Excel (Advanced)</span>
-                <span class="skill-tag">SQL</span>
-                <span class="skill-tag">Confluence</span>
-
+                <span class="skill-tag">Airtable</span><span class="skill-tag">Notion</span><span class="skill-tag">Zapier</span><span class="skill-tag">Google Workspace</span><span class="skill-tag">Microsoft Excel (Advanced)</span><span class="skill-tag">SQL</span><span class="skill-tag">Confluence</span>
                 <p class="skill-category">Finance & Operations</p>
-                <span class="skill-tag">Budgeting</span>
-                <span class="skill-tag">Forecasting</span>
-                <span class="skill-tag">Controlling</span>
-                <span class="skill-tag">Business Plan</span>
-                <span class="skill-tag">KPI Dashboards</span>
-                <span class="skill-tag">Audit Compliance</span>
-                
+                <span class="skill-tag">Budgeting</span><span class="skill-tag">Forecasting</span><span class="skill-tag">Controlling</span><span class="skill-tag">Business Plan</span><span class="skill-tag">KPI Dashboards</span><span class="skill-tag">Audit Compliance</span>
                 <p class="skill-category">Soft Skills</p>
-                <span class="skill-tag">Problem Solving</span>
-                <span class="skill-tag">Communication</span>
-                <span class="skill-tag">Adaptability</span>
-                <span class="skill-tag">Continuous Learning</span>
-                <span class="skill-tag">Stakeholder Management</span>
+                <span class="skill-tag">Problem Solving</span><span class="skill-tag">Communication</span><span class="skill-tag">Adaptability</span><span class="skill-tag">Continuous Learning</span><span class="skill-tag">Stakeholder Management</span>
             </div>
         </section>
         <section id="experience" class="section">
             <h3 class="section-title">Work Experience</h3>
             <div class="timeline">
-                <div class="timeline-item">
-                    <p class="timeline-date">January 2023 – Present</p>
-                    <h4 class="timeline-title">CFO</h4>
-                    <h5 class="timeline-company">Centro Studi Lambda</h5>
-                    <div class="timeline-content">
-                        <ul>
-                            <li>Lead financial planning, reporting, and strategy for an education-focused company with €1M+ annual revenue.</li>
-                            <li>Designed and implemented financial control systems to improve cash flow visibility and cost control.</li>
-                            <li>Coordinated internal audits, ensuring full compliance with tax and legal standards.</li>
-                            <li>Managed cross-functional projects in marketing, operations, and delivery, aligning finance with business goals.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <p class="timeline-date">July 2022 – Present</p>
-                    <h4 class="timeline-title">AFC & Business Consultant (Freelancer)</h4>
-                    <h5 class="timeline-company">Self-employed</h5>
-                    <div class="timeline-content">
-                        <ul>
-                            <li>Provided consulting to pre-seed and seed startups for strategic planning, KPI design, and investor readiness.</li>
-                            <li>Supported growing companies (up to €5M revenue) with management control systems and performance tracking.</li>
-                            <li>Created operational procedures and optimized workflows to improve scalability and reduce inefficiencies.</li>
-                            <li>Built no-code dashboards and automated reporting systems with Airtable and Google Workspace.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <p class="timeline-date">February 2021 – July 2022</p>
-                    <h4 class="timeline-title">Sales Assistant</h4>
-                    <h5 class="timeline-company">Concorsi Militari Academy</h5>
-                    <div class="timeline-content">
-                        <ul>
-                            <li>Managed the customer acquisition process, achieving an average ticket of €1,500 per sale.</li>
-                            <li>Led the customer onboarding experience, optimizing conversions and satisfaction.</li>
-                            <li>Handled payment processes and maintained transaction accuracy.</li>
-                        </ul>
-                    </div>
-                </div>
+                <div class="timeline-item"><p class="timeline-date">January 2023 – Present</p><h4 class="timeline-title">CFO</h4><h5 class="timeline-company">Centro Studi Lambda</h5><div class="timeline-content"><ul><li>Lead financial planning, reporting, and strategy for an education-focused company with €1M+ annual revenue.</li><li>Designed and implemented financial control systems to improve cash flow visibility and cost control.</li><li>Coordinated internal audits, ensuring full compliance with tax and legal standards.</li><li>Managed cross-functional projects in marketing, operations, and delivery, aligning finance with business goals.</li></ul></div></div>
+                <div class="timeline-item"><p class="timeline-date">July 2022 – Present</p><h4 class="timeline-title">AFC & Business Consultant (Freelancer)</h4><h5 class="timeline-company">Self-employed</h5><div class="timeline-content"><ul><li>Provided consulting to pre-seed and seed startups for strategic planning, KPI design, and investor readiness.</li><li>Supported growing companies (up to €5M revenue) with management control systems and performance tracking.</li><li>Created operational procedures and optimized workflows to improve scalability and reduce inefficiencies.</li><li>Built no-code dashboards and automated reporting systems with Airtable and Google Workspace.</li></ul></div></div>
+                <div class="timeline-item"><p class="timeline-date">February 2021 – July 2022</p><h4 class="timeline-title">Sales Assistant</h4><h5 class="timeline-company">Concorsi Militari Academy</h5><div class="timeline-content"><ul><li>Managed the customer acquisition process, achieving an average ticket of €1,500 per sale.</li><li>Led the customer onboarding experience, optimizing conversions and satisfaction.</li><li>Handled payment processes and maintained transaction accuracy.</li></ul></div></div>
             </div>
         </section>
         <section id="education" class="section">
             <h3 class="section-title">Education</h3>
              <div class="timeline">
-                <div class="timeline-item">
-                    <p class="timeline-date">September 2021 – December 2023</p>
-                    <h4 class="timeline-title">Master of Science – Management Engineering</h4>
-                    <h5 class="timeline-company">Politecnico di Milano (Grade: 106/110)</h5>
-                </div>
-                <div class="timeline-item">
-                    <p class="timeline-date">September 2022 – January 2023</p>
-                    <h4 class="timeline-title">Erasmus Program</h4>
-                    <h5 class="timeline-company">Universidade do Porto – FEUP</h5>
-                </div>
-                <div class="timeline-item">
-                    <p class="timeline-date">September 2018 – July 2021</p>
-                    <h4 class="timeline-title">Bachelor’s Degree – Management Engineering</h4>
-                    <h5 class="timeline-company">Politecnico di Milano</h5>
-                </div>
+                <div class="timeline-item"><p class="timeline-date">September 2021 – December 2023</p><h4 class="timeline-title">Master of Science – Management Engineering</h4><h5 class="timeline-company">Politecnico di Milano (Grade: 106/110)</h5></div>
+                <div class="timeline-item"><p class="timeline-date">September 2022 – January 2023</p><h4 class="timeline-title">Erasmus Program</h4><h5 class="timeline-company">Universidade do Porto – FEUP</h5></div>
+                <div class="timeline-item"><p class="timeline-date">September 2018 – July 2021</p><h4 class="timeline-title">Bachelor’s Degree – Management Engineering</h4><h5 class="timeline-company">Politecnico di Milano</h5></div>
             </div>
         </section>
         <section id="languages" class="section languages">
             <h3 class="section-title">Languages</h3>
-            <p><strong>Italian:</strong> Native</p>
-            <p><strong>English:</strong> Fluent (C1/C2)</p>
+            <p><strong>Italian:</strong> Native</p><p><strong>English:</strong> Fluent (C1/C2)</p>
         </section>
         <section id="certifications" class="section certifications">
             <h3 class="section-title">Certifications & Professional Development</h3>
-            <p>Basic knowledge of Agile methodologies (Scrum, Kanban).</p>
-            <p>Currently exploring PMP/PRINCE2 certifications (willing to complete based on role).</p>
+            <p>Basic knowledge of Agile methodologies (Scrum, Kanban).</p><p>Currently exploring PMP/PRINCE2 certifications (willing to complete based on role).</p>
         </section>
     </main>
 </body>
